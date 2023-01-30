@@ -98,6 +98,4 @@ def add_email():
 
 # - Add a statement to run the Flask application which can be reached from any host on port 80.
 if __name__=='__main__':
-    with app.app_context():
-        db.create_all()
-        app.run(debug=True)
+    app.run(debug=True)
