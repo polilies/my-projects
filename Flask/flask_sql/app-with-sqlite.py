@@ -88,9 +88,7 @@ def add_email():
     if request.method == 'POST':
         user_app_name = request.form['username']
         user_app_email = request.form['useremail']
-        with app.app_context()
-            db.create_all()result_app = insert_email(user_app_name, u
-         ser_app_email)
+        result_app = insert_email(user_app_name, user_app_email)
         return render_template('add-email.html', result_html=result_app, show_result=True)
     else:
         return render_template('add-email.html', show_result=False)
